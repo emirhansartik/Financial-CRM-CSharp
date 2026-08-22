@@ -47,5 +47,13 @@ namespace FinancialCrm
         {
             Close();    
         }
+
+        private void btnBillForm_Click(object sender, EventArgs e)
+        {
+            FrmBilling frm = new FrmBilling();
+            frm.Show();
+            this.Hide();    
+
+        }
     }
 }
