@@ -36,7 +36,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 601);
             this.Name = "FrmDashboard";
-            this.Text = "Form1";
+            this.Text = "Arayüz Ekranı";
+            this.Load += new System.EventHandler(this.FrmDashboard_Load);
             this.ResumeLayout(false);
 
         }

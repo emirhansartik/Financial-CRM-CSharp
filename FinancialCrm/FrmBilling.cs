@@ -90,5 +90,10 @@ namespace FinancialCrm
             frm.Show();
             this.Hide();
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            //xx//
+        }
     }
 }

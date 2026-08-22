@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(61)))), ((int)(((byte)(44)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
@@ -88,17 +88,18 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // button7
+            // btnSettings
             // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(31, 430);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(178, 50);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Ayarlar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.Location = new System.Drawing.Point(31, 430);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(178, 50);
+            this.btnSettings.TabIndex = 6;
+            this.btnSettings.Text = "Ayarlar";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // button5
             // 
@@ -369,7 +370,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button4;
