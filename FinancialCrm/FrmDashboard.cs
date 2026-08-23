@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FinancialCrm.Models;
 
 namespace FinancialCrm
 {
@@ -19,7 +20,12 @@ namespace FinancialCrm
 
         private void FrmDashboard_Load(object sender, EventArgs e)
         {
-            //xx//
+            
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
