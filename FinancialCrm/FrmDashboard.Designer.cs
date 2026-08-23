@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblİsBankasiBalance = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblVakifbankBalance = new System.Windows.Forms.Label();
+            this.lblBillAmount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblBillTitle = new System.Windows.Forms.Label();
             this.lblTotalBalance = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,6 +49,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -87,16 +89,16 @@
             this.panel5.Size = new System.Drawing.Size(266, 182);
             this.panel5.TabIndex = 9;
             // 
-            // lblVakifbankBalance
+            // lblBillAmount
             // 
-            this.lblVakifbankBalance.AutoSize = true;
-            this.lblVakifbankBalance.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblVakifbankBalance.ForeColor = System.Drawing.Color.White;
-            this.lblVakifbankBalance.Location = new System.Drawing.Point(-7, 66);
-            this.lblVakifbankBalance.Name = "lblVakifbankBalance";
-            this.lblVakifbankBalance.Size = new System.Drawing.Size(288, 78);
-            this.lblVakifbankBalance.TabIndex = 4;
-            this.lblVakifbankBalance.Text = "00.0000 ₺";
+            this.lblBillAmount.AutoSize = true;
+            this.lblBillAmount.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBillAmount.ForeColor = System.Drawing.Color.White;
+            this.lblBillAmount.Location = new System.Drawing.Point(-7, 66);
+            this.lblBillAmount.Name = "lblBillAmount";
+            this.lblBillAmount.Size = new System.Drawing.Size(288, 78);
+            this.lblBillAmount.TabIndex = 4;
+            this.lblBillAmount.Text = "00.0000 ₺";
             // 
             // label2
             // 
@@ -109,16 +111,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Toplam Bakiyem";
             // 
-            // label6
+            // lblBillTitle
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 26);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "VakıfBank";
+            this.lblBillTitle.AutoSize = true;
+            this.lblBillTitle.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBillTitle.ForeColor = System.Drawing.Color.White;
+            this.lblBillTitle.Location = new System.Drawing.Point(9, 11);
+            this.lblBillTitle.Name = "lblBillTitle";
+            this.lblBillTitle.Size = new System.Drawing.Size(126, 26);
+            this.lblBillTitle.TabIndex = 3;
+            this.lblBillTitle.Text = "Fatura Başlığı";
             // 
             // lblTotalBalance
             // 
@@ -147,7 +149,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(1, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1193, 53);
+            this.panel2.Size = new System.Drawing.Size(1194, 53);
             this.panel2.TabIndex = 7;
             // 
             // label1
@@ -157,9 +159,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 26);
+            this.label1.Size = new System.Drawing.Size(285, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Arayüz Formu";
+            this.label1.Text = "Dashboard / Genel Bakış Formu";
             // 
             // btnExit
             // 
@@ -261,8 +263,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(36)))), ((int)(((byte)(13)))));
-            this.panel4.Controls.Add(this.lblVakifbankBalance);
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.lblBillAmount);
+            this.panel4.Controls.Add(this.lblBillTitle);
             this.panel4.Location = new System.Drawing.Point(588, 75);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(266, 182);
@@ -284,6 +286,11 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 592);
             this.panel1.TabIndex = 6;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmDashboard
             // 
@@ -318,9 +325,9 @@
         private System.Windows.Forms.Label lblİsBankasiBalance;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lblVakifbankBalance;
+        private System.Windows.Forms.Label lblBillAmount;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblBillTitle;
         private System.Windows.Forms.Label lblTotalBalance;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
@@ -335,6 +342,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
