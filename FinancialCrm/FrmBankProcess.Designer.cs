@@ -53,7 +53,7 @@
             this.btnBanksForm = new System.Windows.Forms.Button();
             this.btnCategoriesForm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtBankBalance = new System.Windows.Forms.TextBox();
+            this.txtBankAmount = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbBankOption = new System.Windows.Forms.ComboBox();
@@ -110,6 +110,7 @@
             this.btnCreateBankProcess.TabIndex = 12;
             this.btnCreateBankProcess.Text = "Yeni Ödeme";
             this.btnCreateBankProcess.UseVisualStyleBackColor = true;
+            this.btnCreateBankProcess.Click += new System.EventHandler(this.btnCreateBankProcess_Click);
             // 
             // btnBankProcessList
             // 
@@ -122,6 +123,7 @@
             this.btnBankProcessList.TabIndex = 8;
             this.btnBankProcessList.Text = "Ödeme Listesi";
             this.btnBankProcessList.UseVisualStyleBackColor = true;
+            this.btnBankProcessList.Click += new System.EventHandler(this.btnBankProcessList_Click);
             // 
             // txtBankOption
             // 
@@ -196,7 +198,7 @@
             // 
             this.panel3.Controls.Add(this.cmbBankOption);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.txtBankBalance);
+            this.panel3.Controls.Add(this.txtBankAmount);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.btnUpdateBankProcess);
             this.panel3.Controls.Add(this.BtnRemoveBankProcess);
@@ -353,14 +355,14 @@
             this.panel1.Size = new System.Drawing.Size(248, 594);
             this.panel1.TabIndex = 9;
             // 
-            // txtBankBalance
+            // txtBankAmount
             // 
-            this.txtBankBalance.BackColor = System.Drawing.Color.Honeydew;
-            this.txtBankBalance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBankBalance.Location = new System.Drawing.Point(143, 168);
-            this.txtBankBalance.Name = "txtBankBalance";
-            this.txtBankBalance.Size = new System.Drawing.Size(747, 27);
-            this.txtBankBalance.TabIndex = 16;
+            this.txtBankAmount.BackColor = System.Drawing.Color.Honeydew;
+            this.txtBankAmount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBankAmount.Location = new System.Drawing.Point(143, 168);
+            this.txtBankAmount.Name = "txtBankAmount";
+            this.txtBankAmount.Size = new System.Drawing.Size(747, 27);
+            this.txtBankAmount.TabIndex = 16;
             // 
             // label6
             // 
@@ -405,8 +407,9 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBankProcess";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBankProcess";
+            this.Load += new System.EventHandler(this.FrmBankProcess_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -447,7 +450,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbBankOption;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtBankBalance;
+        private System.Windows.Forms.TextBox txtBankAmount;
         private System.Windows.Forms.Label label6;
     }
 }

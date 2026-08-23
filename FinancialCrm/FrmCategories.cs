@@ -91,5 +91,12 @@ namespace FinancialCrm
             frm.Show();
             this.Hide();
         }
+
+        private void btnBankProcessesForm_Click(object sender, EventArgs e)
+        {
+            FrmBankProcess frm = new FrmBankProcess();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
