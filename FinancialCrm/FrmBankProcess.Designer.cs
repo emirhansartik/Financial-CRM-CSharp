@@ -41,6 +41,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbBankOption = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBankAmount = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtBankProcessId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -53,10 +57,6 @@
             this.btnBanksForm = new System.Windows.Forms.Button();
             this.btnCategoriesForm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtBankAmount = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbBankOption = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -86,6 +86,7 @@
             this.btnUpdateBankProcess.TabIndex = 14;
             this.btnUpdateBankProcess.Text = "Ödeme Güncelle";
             this.btnUpdateBankProcess.UseVisualStyleBackColor = true;
+            this.btnUpdateBankProcess.Click += new System.EventHandler(this.btnUpdateBankProcess_Click);
             // 
             // BtnRemoveBankProcess
             // 
@@ -98,6 +99,7 @@
             this.BtnRemoveBankProcess.TabIndex = 13;
             this.BtnRemoveBankProcess.Text = "Ödeme Sil";
             this.BtnRemoveBankProcess.UseVisualStyleBackColor = true;
+            this.BtnRemoveBankProcess.Click += new System.EventHandler(this.BtnRemoveBankProcess_Click);
             // 
             // btnCreateBankProcess
             // 
@@ -217,6 +219,46 @@
             this.panel3.Size = new System.Drawing.Size(937, 306);
             this.panel3.TabIndex = 11;
             // 
+            // cmbBankOption
+            // 
+            this.cmbBankOption.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbBankOption.FormattingEnabled = true;
+            this.cmbBankOption.Location = new System.Drawing.Point(143, 209);
+            this.cmbBankOption.Name = "cmbBankOption";
+            this.cmbBankOption.Size = new System.Drawing.Size(747, 27);
+            this.cmbBankOption.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(73, 210);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 26);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Banka:";
+            // 
+            // txtBankAmount
+            // 
+            this.txtBankAmount.BackColor = System.Drawing.Color.Honeydew;
+            this.txtBankAmount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBankAmount.Location = new System.Drawing.Point(143, 168);
+            this.txtBankAmount.Name = "txtBankAmount";
+            this.txtBankAmount.Size = new System.Drawing.Size(747, 27);
+            this.txtBankAmount.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(81, 169);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 26);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Tutar:";
+            // 
             // txtBankProcessId
             // 
             this.txtBankProcessId.BackColor = System.Drawing.Color.Honeydew;
@@ -266,6 +308,7 @@
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Çıkış Yap";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSettings
             // 
@@ -354,46 +397,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 594);
             this.panel1.TabIndex = 9;
-            // 
-            // txtBankAmount
-            // 
-            this.txtBankAmount.BackColor = System.Drawing.Color.Honeydew;
-            this.txtBankAmount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBankAmount.Location = new System.Drawing.Point(143, 168);
-            this.txtBankAmount.Name = "txtBankAmount";
-            this.txtBankAmount.Size = new System.Drawing.Size(747, 27);
-            this.txtBankAmount.TabIndex = 16;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(81, 169);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 26);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Tutar:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(73, 210);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 26);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Banka:";
-            // 
-            // cmbBankOption
-            // 
-            this.cmbBankOption.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbBankOption.FormattingEnabled = true;
-            this.cmbBankOption.Location = new System.Drawing.Point(143, 209);
-            this.cmbBankOption.Name = "cmbBankOption";
-            this.cmbBankOption.Size = new System.Drawing.Size(747, 27);
-            this.cmbBankOption.TabIndex = 18;
             // 
             // FrmBankProcess
             // 

@@ -50,7 +50,7 @@ namespace FinancialCrm
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void BtnRemoveBill_Click(object sender, EventArgs e)
@@ -113,6 +113,13 @@ namespace FinancialCrm
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBankProcessForm_Click(object sender, EventArgs e)
+        {
+            FrmBankProcess frm = new FrmBankProcess();
+            frm.Show();
+            this.Hide();
         }
     }
 }
