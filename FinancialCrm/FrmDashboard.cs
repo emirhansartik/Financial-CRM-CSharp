@@ -62,7 +62,7 @@ namespace FinancialCrm
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

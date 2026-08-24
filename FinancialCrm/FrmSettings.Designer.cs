@@ -32,7 +32,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.frmDashboardForm = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.frmBankProcessForm = new System.Windows.Forms.Button();
             this.btnBillForm = new System.Windows.Forms.Button();
             this.btnBanksForm = new System.Windows.Forms.Button();
             this.btnCategoriesForm = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.frmDashboardForm);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.frmBankProcessForm);
             this.panel1.Controls.Add(this.btnBillForm);
             this.panel1.Controls.Add(this.btnBanksForm);
             this.panel1.Controls.Add(this.btnCategoriesForm);
@@ -85,6 +85,7 @@
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Çıkış Yap";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSettings
             // 
@@ -110,18 +111,20 @@
             this.frmDashboardForm.TabIndex = 5;
             this.frmDashboardForm.Text = "Dashboard";
             this.frmDashboardForm.UseVisualStyleBackColor = true;
+            this.frmDashboardForm.Click += new System.EventHandler(this.frmDashboardForm_Click);
             // 
-            // button6
+            // frmBankProcessForm
             // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(31, 246);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(178, 50);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Banka Hareketleri";
-            this.button6.UseVisualStyleBackColor = true;
+            this.frmBankProcessForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.frmBankProcessForm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.frmBankProcessForm.ForeColor = System.Drawing.Color.White;
+            this.frmBankProcessForm.Location = new System.Drawing.Point(31, 246);
+            this.frmBankProcessForm.Name = "frmBankProcessForm";
+            this.frmBankProcessForm.Size = new System.Drawing.Size(178, 50);
+            this.frmBankProcessForm.TabIndex = 4;
+            this.frmBankProcessForm.Text = "Banka Hareketleri";
+            this.frmBankProcessForm.UseVisualStyleBackColor = true;
+            this.frmBankProcessForm.Click += new System.EventHandler(this.frmBankProcessForm_Click);
             // 
             // btnBillForm
             // 
@@ -134,6 +137,7 @@
             this.btnBillForm.TabIndex = 3;
             this.btnBillForm.Text = "Giderler";
             this.btnBillForm.UseVisualStyleBackColor = true;
+            this.btnBillForm.Click += new System.EventHandler(this.btnBillForm_Click);
             // 
             // btnBanksForm
             // 
@@ -146,6 +150,7 @@
             this.btnBanksForm.TabIndex = 1;
             this.btnBanksForm.Text = "Bankalar";
             this.btnBanksForm.UseVisualStyleBackColor = true;
+            this.btnBanksForm.Click += new System.EventHandler(this.btnBanksForm_Click);
             // 
             // btnCategoriesForm
             // 
@@ -359,7 +364,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button frmDashboardForm;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button frmBankProcessForm;
         private System.Windows.Forms.Button btnBillForm;
         private System.Windows.Forms.Button btnBanksForm;
         private System.Windows.Forms.Button btnCategoriesForm;
