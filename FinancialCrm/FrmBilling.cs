@@ -93,7 +93,9 @@ namespace FinancialCrm
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            //xx//
+            FrmSettings frm = new FrmSettings();
+            frm.Show();
+            this.Hide();
         }
 
         private void frmDashboardForm_Click(object sender, EventArgs e)

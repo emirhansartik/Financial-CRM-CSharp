@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.btnDashboardForm = new System.Windows.Forms.Button();
             this.btnBankProcessForm = new System.Windows.Forms.Button();
             this.btnBillForm = new System.Windows.Forms.Button();
@@ -82,7 +82,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(61)))), ((int)(((byte)(44)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnDashboardForm);
             this.panel1.Controls.Add(this.btnBankProcessForm);
             this.panel1.Controls.Add(this.btnBillForm);
@@ -106,17 +106,17 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // button7
+            // btnSettings
             // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(31, 371);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(178, 50);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Ayarlar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.Location = new System.Drawing.Point(31, 371);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(178, 50);
+            this.btnSettings.TabIndex = 6;
+            this.btnSettings.Text = "Ayarlar";
+            this.btnSettings.UseVisualStyleBackColor = true;
             // 
             // btnDashboardForm
             // 
@@ -453,7 +453,7 @@
         private System.Windows.Forms.Button btnBillForm;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnDashboardForm;
         private System.Windows.Forms.Button btnBankProcessForm;
         private System.Windows.Forms.Panel panel2;

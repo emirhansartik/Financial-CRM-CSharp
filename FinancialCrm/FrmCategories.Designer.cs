@@ -217,6 +217,7 @@
             this.btnSettings.TabIndex = 6;
             this.btnSettings.Text = "Ayarlar";
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // frmDashboardForm
             // 
