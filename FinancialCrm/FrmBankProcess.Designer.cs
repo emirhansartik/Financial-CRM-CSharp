@@ -53,7 +53,7 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.frmDashboardForm = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBillForm = new System.Windows.Forms.Button();
             this.btnBanksForm = new System.Windows.Forms.Button();
             this.btnCategoriesForm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -333,6 +333,7 @@
             this.frmDashboardForm.TabIndex = 5;
             this.frmDashboardForm.Text = "Dashboard";
             this.frmDashboardForm.UseVisualStyleBackColor = true;
+            this.frmDashboardForm.Click += new System.EventHandler(this.frmDashboardForm_Click);
             // 
             // button6
             // 
@@ -346,17 +347,18 @@
             this.button6.Text = "Banka Hareketleri";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnBillForm
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(31, 184);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(178, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Giderler";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnBillForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBillForm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBillForm.ForeColor = System.Drawing.Color.White;
+            this.btnBillForm.Location = new System.Drawing.Point(31, 184);
+            this.btnBillForm.Name = "btnBillForm";
+            this.btnBillForm.Size = new System.Drawing.Size(178, 50);
+            this.btnBillForm.TabIndex = 3;
+            this.btnBillForm.Text = "Giderler";
+            this.btnBillForm.UseVisualStyleBackColor = true;
+            this.btnBillForm.Click += new System.EventHandler(this.btnBillForm_Click);
             // 
             // btnBanksForm
             // 
@@ -369,6 +371,7 @@
             this.btnBanksForm.TabIndex = 1;
             this.btnBanksForm.Text = "Bankalar";
             this.btnBanksForm.UseVisualStyleBackColor = true;
+            this.btnBanksForm.Click += new System.EventHandler(this.btnBanksForm_Click);
             // 
             // btnCategoriesForm
             // 
@@ -381,6 +384,7 @@
             this.btnCategoriesForm.TabIndex = 0;
             this.btnCategoriesForm.Text = "Kategoriler";
             this.btnCategoriesForm.UseVisualStyleBackColor = true;
+            this.btnCategoriesForm.Click += new System.EventHandler(this.btnCategoriesForm_Click);
             // 
             // panel1
             // 
@@ -390,7 +394,7 @@
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.frmDashboardForm);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnBillForm);
             this.panel1.Controls.Add(this.btnBanksForm);
             this.panel1.Controls.Add(this.btnCategoriesForm);
             this.panel1.Location = new System.Drawing.Point(-2, 50);
@@ -447,7 +451,7 @@
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button frmDashboardForm;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBillForm;
         private System.Windows.Forms.Button btnBanksForm;
         private System.Windows.Forms.Button btnCategoriesForm;
         private System.Windows.Forms.Panel panel1;

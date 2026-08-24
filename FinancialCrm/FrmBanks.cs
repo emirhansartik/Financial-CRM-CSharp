@@ -69,5 +69,14 @@ namespace FinancialCrm
             frm.Show();
             this.Hide();
         }
+
+        private void btnBankProcessForm_Click(object sender, EventArgs e)
+        {
+         
+
+            FrmBankProcess frm = new FrmBankProcess();
+            frm.Show();
+            this.Hide();
+    }
     }
 }
