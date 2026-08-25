@@ -25,7 +25,7 @@ namespace FinancialCrm
         {
             Application.Exit();
         }
-
+        // Kullanıcı adı ve şifre kontrolü
         private void btnGiris_Click(object sender, EventArgs e)
         {
 

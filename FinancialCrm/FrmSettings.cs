@@ -73,7 +73,7 @@ namespace FinancialCrm
             var values = db.Users.ToList();
             dataGridView1.DataSource = values;
         }
-
+        // Güncelleme Kısmı
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
             string username = txtUserName.Text;    
