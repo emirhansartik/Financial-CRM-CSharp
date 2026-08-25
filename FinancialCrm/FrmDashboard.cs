@@ -65,6 +65,7 @@ namespace FinancialCrm
             Application.Exit();
         }
 
+        // Timer Kısmı
         private void timer1_Tick(object sender, EventArgs e)
         {
             count++;

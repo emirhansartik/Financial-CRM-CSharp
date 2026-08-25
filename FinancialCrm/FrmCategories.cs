@@ -58,6 +58,7 @@ namespace FinancialCrm
             dataGridView1.DataSource = values;
         }
 
+        // Güncelleme Kısmı
         private void btnUpdateCategory_Click(object sender, EventArgs e)
         {
             string categorieName = txtCategoriesName.Text;
